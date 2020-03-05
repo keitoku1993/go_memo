@@ -1,0 +1,13 @@
+# ymlのバージョン
+version: '3'
+
+# コンテナサービスを指定
+services:
+    golang:
+        # 同一フォルダにあるDockerfileをビルドする
+        build: .
+        # 外部と接続する
+        ports:
+            - "7070:7070"
+        # コンテナ名を指定（任意）
+        container_name: backend
